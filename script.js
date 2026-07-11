@@ -137,7 +137,7 @@ function updateCartUI()
     const headerCount = $('#cartHeaderCount');
     const subtotalEl = $('#cartSubtotal');
     const cartItemEl = $('#cartItem');
-}
+
 
 if (countBadge)
 {
@@ -180,3 +180,139 @@ cartItemsEl.innerHTML = cart.map(item => `
       </div>
     </div>
   `).join('');
+
+  $$('cart-item-remove', cartItemEl).forEach(btn => {
+    btn.addEventListener('click', () => {
+        const id = parseInt(btn.dataset.id);
+        cart = cart.filter(i => i.id !== id);
+        saveCart();
+        updateCartUI();
+        showToast('Item removed from your bag.');
+    });
+  });
+
+  $$('.cart-qty-btn', cartItemEl).forEach(btn => {
+    btn.addEventListener('click', () => {
+        const id = parseInt(btn.dataset.id);
+        const action = btn.dataset.actionn;
+        const item = cart.find(i => i.id === id);
+        if (!item) return;
+        if (action === 'inc') {
+            item.qty += 1;
+        } else {
+            item.qty -= 1;
+            if (item.qty <= 0) {
+                cart = cart.filter(i => i.id !== id);
+            }
+        }
+        saveCart();
+        updateCartUI();
+    });
+  });
+}
+
+function addToCart(card) {
+    const id = parseInt(card.dataset.id);
+    const name = card.dataset.name;
+    const price = parseInt(card.dataset.price);
+    const image = card.dataset.image || '';
+    const catEl = $('.product-catergory', card);
+    const category = catEl ? catEl.textContent : '';
+
+    const existing = cart.find(i => i.id === id);
+    if(existing)
+    {
+        existing.qty += 1;
+        showToast('{name} - quantity updated ✓');
+    } else {
+        cart.push({id, name, price, image, category, qty: 1});
+        showToast('${name} added to your bag ✓');
+    }
+
+    saveCart();
+    updateCartUI();
+    openCart();
+}
+
+function openCart()
+{
+    $('#cartDrawer')?.classList.add('open');
+    $('#cartOverlay')?.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeCart()
+{
+    $('#cartDrawer')?.classList.remove('open');
+    $('#cartOverlay')?.classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+(function initCart() {
+    $('#cartToggle')?.addEventListener('click', () => {
+        $('#cartDrawer')?.classList.contains('open') ? closeCart() : openCart();
+    });
+
+    $('.cart-checkout')?.addEventListener('click', () => {
+        if (cart.length === 0) {
+            showToast('Your bag is empty!');
+            return;
+        }
+        // TODO: replace with real checkout URL
+        showToast('Redirecting to checkout...');
+    });
+
+    updateCartUI();
+})();
+
+(function initWishlist() {
+    let wishlist = JSON.parse(localStorage.getItem('noire_wishlisyt') || '[]');
+
+    function saveWishlist()
+    {
+        localStorage.setItem('noire_wishlist', JSON.stringify(wishlist));
+    }
+
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.product-wishlist');
+        if (!btn) return;
+        const card = btn.closest('.product-card');
+        if (!card) return;
+        const id = parseInt(card.dataset.id);
+        const name = card.dataset.name;
+        const idx = wishlist.indexOf(id);
+
+        if (idx === -1)
+        {
+            wishlist.psh(id);
+            btn.classList.add('active');
+            showToast(`${name} saved to wishlist ♥`)
+        } else {
+            wishlist.splice(idx, 1);
+            btn.classList.remove('active');
+            showToast(`${name} removed from wishlist`);
+        }
+        saveWishlist();
+    });
+
+    const saved = JSON.parse(localStorage.getItem('noire_wishlist') || '[]');
+    $$('.product-card').forEach(card => {
+        if (saved.includes(parseInt(card.dataset.id)))
+        {
+            const btn = $('.product-wishlist', card);
+            if (btn) btn.classList.add('active');
+        }
+    });
+})();
+
+(function initSizeSelector ()
+{
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.size-btn');
+        if (!btn) return;
+        const group = btn.closest('.product-sizes');
+        if (!group) return;
+        $$('.size-btn', group).forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+    });
+})();
