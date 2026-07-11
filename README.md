@@ -1,4 +1,3 @@
-# Niore Store
 # 🖤 Noire Lifestyle
 
 > **A modern online fashion store built from scratch using HTML, CSS & JavaScript.**
