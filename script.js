@@ -316,3 +316,162 @@ function closeCart()
         btn.classList.add('active');
     });
 })();
+
+(function initSlider() {
+    const track = $('#sliderTrack');
+    const prevBtn = $('#sliderPrev');
+    const nextBtn = $('#sliderNext');
+    if (!track || !prevBtn || !nextBtn) return;
+
+    let currentIndex = 0;
+
+    function getVisibleCount()
+    {
+        if (window.innerWidth <= 540) return 1;
+        if (window.innerWidth <= 860) return 2;
+        if (window.innerWidth <= 1100) return 3;
+        return;
+    }
+
+    function getSlides()
+    {
+        return $$('.product-card--slide', track);
+    }
+
+    function updateSlider()
+    {
+        const slides = getSlides();
+        const visible = getVisibleCount();
+        const maxId = Math.max(0, slides.length - visible);
+        currentIndex = Math.max(0, Math.min(currentIndex, maxIdx));
+
+        const cardWidth = slides[0]?.offsetWidth || 0;
+        const gap = 20;
+        const offset = currentIndex * (cardWidth + gap);
+        track.style.transform = `translateX(-${offset}px)`;
+
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= maxId;
+    }
+
+    prevBtn.addEventListener('click', () => {currentIndex -= 1; updateSlider(); });
+    nextBtn.addEventListener('click', () => {currentIndex += 1; updateSlider(); });
+
+    window.addEventListner('resize', () => {
+        currentIndex = 0;
+        updateSlider();
+    })();
+
+    (function initNewsletter() {
+        function handleNewsletterSubmit(form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const input = form.querySelector('input[type="email"]');
+                if (!input) return;
+                const email = input.value.trim();
+
+                if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+                {
+                    showToast('Please enter a valid email address.');
+                    input.focus();
+                    return;
+                }
+
+                // TODO: send `email` to your newsletter service (e.g. Mailchimp, SendGrid)
+                showToast(`You're subscribed! Welcome to Noire. ✓`);
+                input.value = '';
+            });
+        }
+
+        const mainForm = $('#newsletterForm')
+        const footerForm = $('#footerNewsletterForm');
+        if (mainForm) handleNewsletterSubmit(mainForm);
+        if (footerForm) handleNewsletterSubmit(footerForm);
+    })();
+
+    (function initContactForm()
+    {
+        const form = $('#contactForm');
+        if (!form) return;
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = $('#contactName')?.value.trim();
+            const email = $('#contactEmail')?.value.trim();
+            const message = $('#contactMessage')?.value.trim();
+
+            if (!name)
+            {
+               showToast('please enter your name.');
+               $('#contactName')?.focus();
+               return;
+            }
+
+            if (!email|| !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+               showToast ('please enter a valid email address.');
+               $('#contactEmail')?.focus();
+               return;
+            }
+
+            if (!message)
+            {
+                showToast('Please write a message.');
+                $('#contactMessage')?.focus();
+                return;
+            }
+
+            // TODO: send form data to your backend / Formspree / EmailJS
+            // Example with Formspree: fetch('https://formspree.io/f/YOUR_FORM_ID',) {
+            showToast('Message sent! We\'ll get back to you soon. ✓' );
+            form.reset();
+
+            });
+                
+            })();
+
+            (function initScrollReveal()
+            {
+                const targets = [
+                    '.product-card',
+                    '.category-card',
+                    '.trust-item',
+                    '.insta-iten',
+                    '.about-inner',
+                    '.contact-detail-item',
+                ];
+
+                const allEls = $$(targets.join(','));
+
+                if(!('IntersectionObserver' in window))
+                {
+                    allEls.forEach(el.style.opacity = '1');
+                    return;
+                }
+
+                allEls.forEach(el => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(24px)';
+                    el.style.transition = 'opacity 0.55s eae, transform 0.55s ease';
+                });
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px -px -40px 0px',
+                });
+
+                allEls,forEach((el, i) => {
+                    el.style.transitionDelay = `${(i % 4) * 0.08}s`;
+                    observer.observe(el);
+                });
+            })();
+
+    })
