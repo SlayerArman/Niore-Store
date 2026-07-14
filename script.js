@@ -360,6 +360,7 @@ function closeCart()
     window.addEventListner('resize', () => {
         currentIndex = 0;
         updateSlider();
+    }, {passive: true});
     })();
 
     (function initNewsletter() {
@@ -474,4 +475,141 @@ function closeCart()
                 });
             })();
 
-    })
+            (function initSmoothScroll() {
+                document.addEventListener('click', (e) => {
+                    const link = e.target.closest('a [href^="#"]');
+                    if (!link) return;
+                    const hash = link.getAttribute('herf');
+                    if (hash === '#') return;
+                    const taret = document.querySelector('hash');
+                    if (!target) return;
+                    e.preventDefault();
+                    const headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 72;
+                    const top = target.getBoundingClientRect().top + window.scrollY - headerH - 16;
+                    windown.scrollTo({top, behaviour: 'smooth'});
+                });
+            })();
+
+            (function initActiveNav() {
+                const sections = $$('section[id]');
+                const navLinks = $$('.nav-link');
+                if (!sections.length || !navLinks.length) return;
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                      if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        navLinks.forEach(link => {
+                            const href = link.getAttribute('href');
+                            link.style.color = (href === `#${id}`) ? 'var(--gold)' : '';
+                        });
+                    }
+              });
+            }, {rootMargin: '-40% 0px -55% 0px' });
+
+            sections.forEach(sec=> observer.observer(sec));
+        })();
+
+        (function initLazyImages() {
+         if(!('IntersectionObserver' in window)) return;
+
+         const imgs = $$('img[data-src]');
+         if (!imgs.length) return;
+
+         const imgObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting)
+                {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    imgObserver.unobserve(img);
+                }
+            });
+         }, {rootMargin: '200px'});
+
+         imgs.forEach(img => imgObserver.observe(img));
+        })();
+
+        (function initCookieBanner() {
+            if (localStorage.getItem('noire_cookies_accepted')) return;
+
+            const banner = document.createElement('div');
+            banner.id = 'cookieBanner';
+            banner.style.cssText = `
+                positon: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: var(--charcoal);
+                color: rgba(240, 237 232, 0.8);
+                padding: 16px;
+                font-size: 0.8rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+                z-index: 600;
+                flex-wrap: wrap;
+                border-top: 1px solid rgba(201, 169, 110. 0.2);
+                box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+            `;
+
+            banner.innerHTML =`
+                <span>We use cookies to improve your experience. By continuing, you agree to our <a href='#' style="color:var(--gold); text-decoration: underline;">Privacy Policy</a>.</span>
+                <div style = "display: flex; gap: 10px; flex-shrink: 0;">
+                    <button id = "cookieDecline" style = "paddign: 8px 18px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border: 1.5px solid rgba(255, 255, 255, 0.2); border-radius: 2px; color: rgba(255, 255, 255, 0.6); background: none; cursor: pointer;">Decline</button>
+                    <button id = "cookieAccept" style = "padding:8px 18px; font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; background:var(--gold); color:var(--black); border:none; border-radius:2px; cursor:pointer;">Accept</button>
+                </div>
+                `;
+
+                document.body.appendChild(banner);
+
+                function dismissBanner(accepted)
+                {
+                    if (accepted) localStorage.setItem('noire_cookies_accepted', '1');
+                    banner.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                    banner.style.opacity = '0';
+                    banner.style.transform = 'translateY(20px)';
+                    setTimeout(() => banner.remove(), 300);
+                }
+
+                document.getElementById('cookieAccept')?.addEventListener('click', () => dismissBanner(true));
+                document.getElementById('cookieDecline')?.addEventListener('click', () => dismissBanner(false));
+            })();
+
+            (function initImgFallbacks() {
+                $$('img').forEach(img => {
+                    img.addEventListener('error', () => {
+                    img.style.display = 'none';
+                    const placeholder = img.nextElementSibling;
+                    if (placeholder?.classList.contains('category-img-placeholder') ||
+                        placeholder?.classList.contains('product-img-placeholder') ||
+                        placeholder?.classList.contains('about-img-placeholder') ||
+                        placeholder?.classList.contains('insta-placeholder')) {
+                        placeholder.style.display = 'flex';
+                    }
+                    });
+                });
+                })();
+
+                (function syncHeaderTop() {
+                const bar    = $('#announcementBar');
+                const header = $('#siteHeader');
+                if (!bar || !header) return;
+
+                function update() {
+                    const annH = bar.classList.contains('hidden') ? 0 : bar.offsetHeight;
+                    header.style.top = `${annH}px`;
+                }
+
+                new MutationObserver(update).observe(bar, { attributes: true, attributeFilter: ['class'] });
+                window.addEventListener('resize', update, { passive: true });
+                update();
+                })();
+
+                document.addEventListener('DOMContentLoaded', () => {
+                // Add any additional init code here if needed.
+                console.log('%cNoire Lifestyle 🖤', 'font-family: Georgia, serif; font-size:20px; color: #C9A96E;');
+                console.log('%cPowered by craft, worn with purpose.', 'font-size: 12px; color: #888;');
+                });
