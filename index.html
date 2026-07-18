@@ -3,32 +3,32 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Niore Lifestyle - Clothes, Jewellery & Crafted Good</title>
-        <meta name="description" content="Niore Lifestyle - Premium clothing, handcrafted jewellery, beads and artisan accessories." />
+        <title>Noire Lifestyle - Luxury Fashion, Jewellery & Lifestyle Products</title>
+        <meta name="description" content="Noire Lifestyle - Discover premium fashion, handcrafted jewellery, accessories, and luxury lifestyle essentials at NOIRE LIFESTYLE." />
         <link rel="stylesheet" href="style.css" />
         <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
 
         <!---Google Fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts/googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     </head>
     <body>
         <div class="announcement-bar" id="announcementBar">
             <div class="marquee-track">
-                <span>Free delivery on orders above 2,500PKR &nbsp;•&nbsp; New Arrivals: Summer Collection &nbsp;•&nbsp; Handcrafted Jewellery Now In Stock &nbsp;•&nbsp; Use code NOIRE10 for 105 off your first order &nbsp;•&nbsp;</span>
+                <span>Free delivery on orders above 2,500PKR &nbsp;•&nbsp; New Arrivals: Summer Collection &nbsp;•&nbsp; Handcrafted Jewellery Now In Stock &nbsp;•&nbsp; Use code NOIRE10 for 10% off your first order &nbsp;•&nbsp;</span>
             </div>
             <button class="announcement-close" id="closeAnnouncement" aria-label="Close announcement">✕</button>
         </div>
 
         <header class="site-header" id="siteHeader">
             <div class="header-inner">
-                <button class="hamburger" id="hamburger" aria-label="Open Menu">
+                <button class="hamburger" id="hamburger" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
 
-                <a href="index.html" class="logo" aria-label="Niore Ligestyle Home">
-                    <span class="logo-text">NIORE</span>
+                <a href="index.html" class="logo" aria-label="Noire Lifestyle Home">
+                    <span class="logo-text">NOIRE</span>
                     <span class="logo-sub">LIFESTYLE</span>
                 </a>
 
@@ -42,7 +42,7 @@
                                     <p class="dropdown-heading">Clothing</p>
                                     <a href="#shirts">Shirts</a>
                                     <a href="#pants">Pants</a>
-                                    <a href="#new-arrival"></a>New Arrivals</a>
+                                    <a href="#new-arrival">New Arrivals</a>
                                 </div>
                                 <div class="dropdown-col">
                                     <p class="dropdown-heading">Accessories</p>
@@ -67,7 +67,7 @@
                     <button class="icon-btn" id="searchToggle" aria-label="Search">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                     </button>
-                    <a href="#wishlist" class="icon-btn" aria-label="Whishlist">
+                    <a href="#wishlist" class="icon-btn" aria-label="Wishlist">
                         <svg wdith="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                     </a>
                     <button class="icon-btn cart-btn" id="cartToggle" aria-label="Cart">
@@ -80,7 +80,7 @@
             <div class="search-bar" id="searchBar">
                 <input type="text" placeholder="Search for shirts, jewellery, beads..." class="search-input" id="searchInput" />
                 <button class="search-submit" aria-label="Submit search">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2=15.65/></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="15.65"/></svg>
                 </button>
             </div>
         </header>
@@ -89,11 +89,11 @@
             <div class="mobile-nav">
                 <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">✕</button>
                 <a href="#hero" class="mobile-nav-link">Home</a>
-                <details class="mobile-accordian">
+                <details class="mobile-accordion">
                     <summary>Shop</summary>
                     <a href="#shirts">Shirts</a>
                     <a href="#pants">Pants</a>
-                    <a href="jewellery">Crafted Jewellery</a>
+                    <a href="#jewellery">Crafted Jewellery</a>
                     <a href="#beads">Beads</a>
                     <a href="#new-arrival">New Arrivals</a>
                     <a href="#sale">Sale</a>
@@ -150,13 +150,9 @@
                         
                       <!-- Category 1: Shirts -->  
                        <a href="#shirts" class="category-card" id="shirts">
-                        <!--
-                            CATEGORY IMAGE: Replace src with your image
-                            Recommended size: 600×750px (portrait)
-                            Path: assets/images/category-shirts.jpg
-                            -->
+
                             <div class="category-img-wrap">
-                                <img src="assets/images/category-shirts.jpg" alt="Shirts collection" class="category-img" onerror="this.style.display='none'" />
+                                <img src="assets/images/category-shirts.png" alt="Shirts collection" class="category-img" onerror="this.style.display='none'" />
                                 <div class="category-img-placeholder">
                                     <span>Shirts</span>
                                     <!-- Add image at: assets/images/category-shirts.jpg -->
@@ -171,7 +167,7 @@
                     <!-- Category 2: Pants -->
                      <a href="#pants" class="category-card" id="pants">
                         <div class="category-img-wrap">
-                            <img src="assets/images/category-pants.jpg" alt="Pants collection" class="category-img" onerror="this.style.display='none'" />
+                            <img src="assets/images/category-pants.png" alt="Pants collection" class="category-img" onerror="this.style.display='none'" />
                             <div class="category-img-placeholder">
                                 <span>Pants</span>
                                 <!-- Add image at: assets/images/category-pants.jpg -->
@@ -184,9 +180,9 @@
                      </a>
 
                     <!-- Category 3: Jewellery -->
-                     <a href="jewellery" class="category-card category-card--tall" id="jewellery">
+                     <a href="#jewellery" class="category-card category-card--tall" id="jewellery">
                         <div class="category-img-warp">
-                            <img src="assets/images/category-jewellery.jpg" alt="jewellery collection" class="category-img" onerror="this.style.display = 'none'" />
+                            <img src="assets/images/category-jewellery.png" alt="jewellery collection" class="category-img" onerror="this.style.display = 'none'" />
                             <div class="category-img-placeholder">
                                 <span>Jewellery</span>
                             </div>
@@ -200,11 +196,10 @@
                      <!-- Category 4: Beads -->
                       <a href="#beads" class="category-card" id="beads">
                         <div class="category-img-wrap">
-                            <img src="assets/images/category-beads.jpg" alt="Bead collections" class="category-img" onerror="this.style.display='none'" />
+                            <img src="assets/images/category-beads.png" alt="Bead collections" class="category-img" onerror="this.style.display='none'" />
                             <div class="category-img-placeholder">
                                 <span>Beads</span>
 
-                                <!-- Add image at: assets/images/category-beads.jpg -->
                             </div>
                         </div>
                         <div class="category-info">
@@ -225,19 +220,12 @@
                     </div>
                     <div class="products-grid" id="productsGrid">
                         
-                        <!-- ============================================================
-                        PRODUCT CARD TEMPLATE
-                        To add more products, duplicate a <article class="product-card"> block.
-                        Product image path: assets/images/products/product-name.jpg
-                        Recommended size: 500×600px
-                        ===================================================== -->
 
                     <!-- Product 1 -->
                      <article class="product-card" data-id="1" data-name="Linen Oversized Shirt" data-price="3500" data-image="assets/images/products/shirt-1.jpg">
                      <div class="product-img-wrap">
-                     <img src="assets/images/products/shirt-1.jpg" alt="Linen Oversized Shirt" class="product-img" onerror="this.src=''" />
+                     <img src="assets/images/products/shirt-1.png" alt="Linen Oversized Shirt" class="product-img" onerror="this.src=''" />
                      <div class="product-img-placeholder">
-                        <!-- Add image: assets/images/products/shirt-1.jpg -->
                      </div>
                      <div class="product-badges">
                         <span class="badge badge-new">New</span>
@@ -268,9 +256,8 @@
                      <!-- Product 2 -->
                     <article class="product-card" data-id="2" data-name="Wide-Leg Linen Pants" data-price="4200" data-image="assets/images/products/pants-1.jpg">
                         <div class="product-img-wrap">
-                            <img src="assetsimages/products/pants-1.jpg" alt="Wide-Leg Linen Pants" class="products-img" onerror="this.src = ''" />
+                            <img src="assetsimages/products/pants-1.png" alt="Wide-Leg Linen Pants" class="products-img" onerror="this.src = ''" />
                             <div class="product-img-placeholder">
-                                <!-- Add image: assets/images/products/pants-1.jpg -->  
                             </div> 
                             <div class="product-badges">
                                 <span class="badge badge-hot">Hot</span>
@@ -300,9 +287,8 @@
                     <!-- Product 3 -->
                     <article class="product-card" data-id="3" data-name="Layered Bead Necklace" data-price="1800" data-image="assets/images/products/jewellery-1.jpg">
                         <div class="product-img-wrap">
-                            <img src="assets/images/products/jewellery-1.jpg" alt="Layered Bead Necklace" class="product-img" onerror="this.src = ''" />
+                            <img src="assets/images/products/jewellery-1.png" alt="Layered Bead Necklace" class="product-img" onerror="this.src = ''" />
                             <div class="product-img-placeholder">
-                                <!-- Add image: assets/images/products/jewellery-1.jpg -->
                             </div>
                             <div class="product-badges">
                                 <span class="badge badge-new">New</span>
@@ -327,9 +313,8 @@
                     <!-- Product 4 -->
                     <article class="product-card" data-id="4" data-name="Embroidered Casual Shirt" data-price="2900" data-image="assets/images/products/shirts/shirt-2.jpg">
                         <div class="product-img-wrap">
-                            <img src="assets/images/products/shirts-2.jpg" alt="Embroidered Casual Shirt" class="product-img" onerror="this.src = ''" />
+                            <img src="assets/images/products/shirts-2.png" alt="Embroidered Casual Shirt" class="product-img" onerror="this.src = ''" />
                             <div class="product-img-placeholder">
-                                <!-- Add image: assets/images/products/shirt-2.jpg -->  
                             </div>
                             <div class="product-badges">
                                 <span class="badge badge-sale">Sale</span>
@@ -361,8 +346,7 @@
                     <article class="product-card" data-id="5" data-name="terracotta Bead Bracelet" data-price="950" data-image="assets/images/products/beads-1.jpg">
                         <div class="product-img-wrap">
                             <img src="assets/images/products/beads-1.jpg" alt="Terracota Bead Bracelet" class="product-img" onerror="this.src = ''" />
-                            <div class="product-img-placeholder">
-                                <!-- Add image: assets/images/products/beads-1.jpg -->  
+                            <div class="product-img-placeholder">  
                             </div>
                             <button class="product-wishlist" aria-label="Add to wishlist">
                                 <svg wwidth="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wwidth="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7/78l1.06 1.06L122 21.23l7.78-7.78 1.06-1.06a5.5 0 0 0 0-7.78z"/></svg>
@@ -386,7 +370,6 @@
                     <div class="product-img-wrap">
                     <img src="assets/images/products/jewellery-2.jpg" alt="Copper Wire Earrings" class="product-img" onerror="this.src=''" />
                     <div class="product-img-placeholder">
-                        <!-- Add image: assets/images/products/jewellery-2.jpg -->
                     </div>
                     <div class="product-badges">
                         <span class="badge badge-hot">Hot</span>
@@ -413,7 +396,6 @@
                     <div class="product-img-wrap">
                     <img src="assets/images/products/pants-2.jpg" alt="Relaxed Chino Trousers" class="product-img" onerror="this.src=''" />
                     <div class="product-img-placeholder">
-                        <!-- Add image: assets/images/products/pants-2.jpg -->
                     </div>
                     <button class="product-wishlist" aria-label="Add to wishlist">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
@@ -442,7 +424,6 @@
                     <div class="product-img-wrap">
                     <img src="assets/images/products/beads-2.jpg" alt="Stone Bead Necklace Set" class="product-img" onerror="this.src=''" />
                     <div class="product-img-placeholder">
-                        <!-- Add image: assets/images/products/beads-2.jpg -->
                     </div>
                     <div class="product-badges">
                         <span class="badge badge-new">New</span>
@@ -469,12 +450,7 @@
             </section>
 
             <section class="artisan-banner" id="artisan">
-                 <!--
-                BANNER IMAGE:
-                Add a full-width image in style.css under .artisan-banner
-                or add an <img> tag below.
-                Recommended: assets/images/artisan-banner.jpg (1920x600px)
-                -->
+
                 <div class="artisan-grain"></div>
                 <div class="artisan-content container">
                     <p class="section-eyebrow">Communtiy Favorites</p>
@@ -488,8 +464,8 @@
                             <!-- Bestseller 1 -->
                              <article class="product-card product-card--slide" data-id="9" data-name="Classic Kurta Shirt" data-price="2800" data-image="assets.images/products/shirt-3.jpg">
                                 <div class="product-img-wrap">
-                                    <img src="assets/images/products/shirt-3.jpg" alt="Classic Kurta Shirt" class="product-img" onerror="this.src = ''" />
-                                    <div class="product-img-placeholder"><!-- Add: assets/images/products/shirt-3.jpg --></div>
+                                    <img src="assets/images/products/shirts-3.png" alt="Classic Kurta Shirt" class="product-img" onerror="this.src = ''" />
+                                    <div class="product-img-placeholder"></div>
                                     <button class="product-wwishlist" aria-label="Add to wishlist">
                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wwidth="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                                     </button>
@@ -507,8 +483,8 @@
                              <!-- Bestseller 2 -->
                             <article class="product-card product-card--slide" data-id="10" data-name="Braided Gold Cuff" data-price="2500" data-image="assets/images/products/jewellery-3.jpg">
                             <div class="product-img-wrap">
-                                <img src="assets/images/products/jewellery-3.jpg" alt="Braided Gold Cuff" class="product-img" onerror="this.src=''" />
-                                <div class="product-img-placeholder"><!-- Add: assets/images/products/jewellery-3.jpg --></div>
+                                <img src="assets/images/products/jewellery-3.png" alt="Braided Gold Cuff" class="product-img" onerror="this.src=''" />
+                                <div class="product-img-placeholder"></div>
                                 <button class="product-wishlist" aria-label="Add to wishlist">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                                 </button>
@@ -526,7 +502,7 @@
                             <!-- Bestseller 3 -->
                             <article class="product-card product-card--slide" data-id="11" data-name="Midnight Slim Trousers" data-price="3600" data-image="assets/images/products/pants-3.jpg">
                             <div class="product-img-wrap">
-                                <img src="assets/images/products/pants-3.jpg" alt="Midnight Slim Trousers" class="product-img" onerror="this.src=''" />
+                                <img src="assets/images/products/pants-3.png" alt="Midnight Slim Trousers" class="product-img" onerror="this.src=''" />
                                 <div class="product-img-placeholder"><!-- Add: assets/images/products/pants-3.jpg --></div>
                                 <button class="product-wishlist" aria-label="Add to wishlist">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
@@ -545,8 +521,8 @@
                             <!-- Bestseller 4 -->
                             <article class="product-card product-card--slide" data-id="12" data-name="Desert Rose Bead Set" data-price="1450" data-image="assets/images/products/beads-3.jpg">
                             <div class="product-img-wrap">
-                                <img src="assets/images/products/beads-3.jpg" alt="Desert Rose Bead Set" class="product-img" onerror="this.src=''" />
-                                <div class="product-img-placeholder"><!-- Add: assets/images/products/beads-3.jpg --></div>
+                                <img src="assets/images/products/beads-3.png" alt="Desert Rose Bead Set" class="product-img" onerror="this.src=''" />
+                                <div class="product-img-placeholder"></div>
                                 <button class="product-wishlist" aria-label="Add to wishlist">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                                 </button>
@@ -564,7 +540,7 @@
                             <!-- Bestseller 5 -->
                             <article class="product-card product-card--slide" data-id="13" data-name="Block Print Shirt" data-price="3200" data-image="assets/images/products/shirt-4.jpg">
                             <div class="product-img-wrap">
-                                <img src="assets/images/products/shirt-4.jpg" alt="Block Print Shirt" class="product-img" onerror="this.src=''" />
+                                <img src="assets/images/products/shirts-4.png" alt="Block Print Shirt" class="product-img" onerror="this.src=''" />
                                 <div class="product-img-placeholder"><!-- Add: assets/images/products/shirt-4.jpg --></div>
                                 <button class="product-wishlist" aria-label="Add to wishlist">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
@@ -627,14 +603,8 @@
             <section class="about-section" id="about">
                 <div class="conatiner about-inner">
                     <div class="about-img-col">
-                    <!--
-                        ABOUT IMAGE:
-                        Replace src with your image.
-                        Recommended: assets/images/about.jpg (800×900px portrait)
-                    -->
-                        <img src="assets/images/about.jpg" alt="Noire Lifestyle - Our Story" class="about-img" onerror="this.style.display='none'" />
+                        <img src="assets/images/about.png" alt="Noire Lifestyle - Our Story" class="about-img" onerror="this.style.display='none'" />
                         <div class="img-about-placeholder">
-                           <!-- Add image at: assets/images/about.jpg -->
                             <span>Our Story</span>
                         </div>
                     </div>
@@ -658,38 +628,33 @@
                        <a href="https://www.instagram.com/noirlifestyle" target="_blank" rel="noopener" class="insta-handle">@noirelifestyle</a>
                     </h2>
                     <div class="insta-grid">
-                       <!--
-                            INSTAGRAM IMAGES:
-                            Replace each src with a square photo (600×600px).
-                            Paths: assets/images/insta/insta-1.jpg to insta-6.jpg
-                        -->
                         <a href="https://www.instagram.com/noirelifestyle" class="insta-item" target="_blank" rel="noopener">
-                        <img src="assets/images/insta/insta-1.jpg" alt="Instagram post 1" onerror="this.style.display='none'" />
+                        <img src="assets/images/insta/insta-1.png" alt="Instagram post 1" onerror="this.style.display='none'" />
                         <div class="insta-placeholder">📸</div>
                         <div class="insta-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
                         </a>
                         <a href="https://www.instagram.com/noirelifestyle" class="insta-item" target="_blank" rel="noopener">
-                        <img src="assets/images/insta/insta-2.jpg" alt="Instagram post 2" onerror="this.style.display='none'" />
+                        <img src="assets/images/insta/insta-2.png" alt="Instagram post 2" onerror="this.style.display='none'" />
                         <div class="insta-placeholder">📸</div>
                         <div class="insta-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
                         </a>
                         <a href="https://www.instagram.com/noirelifestyle" class="insta-item" target="_blank" rel="noopener">
-                        <img src="assets/images/insta/insta-3.jpg" alt="Instagram post 3" onerror="this.style.display='none'" />
+                        <img src="assets/images/insta/insta-3.png" alt="Instagram post 3" onerror="this.style.display='none'" />
                         <div class="insta-placeholder">📸</div>
                         <div class="insta-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
                         </a>
                         <a href="https://www.instagram.com/noirelifestyle" class="insta-item" target="_blank" rel="noopener">
-                        <img src="assets/images/insta/insta-4.jpg" alt="Instagram post 4" onerror="this.style.display='none'" />
+                        <img src="assets/images/insta/insta-4.png" alt="Instagram post 4" onerror="this.style.display='none'" />
                         <div class="insta-placeholder">📸</div>
                         <div class="insta-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
                         </a>
                         <a href="https://www.instagram.com/noirelifestyle" class="insta-item" target="_blank" rel="noopener">
-                        <img src="assets/images/insta/insta-5.jpg" alt="Instagram post 5" onerror="this.style.display='none'" />
+                        <img src="assets/images/insta/insta-5.png" alt="Instagram post 5" onerror="this.style.display='none'" />
                         <div class="insta-placeholder">📸</div>
                         <div class="insta-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
                         </a>
                         <a href="https://www.instagram.com/noirelifestyle" class="insta-item" target="_blank" rel="noopener">
-                        <img src="assets/images/insta/insta-6.jpg" alt="Instagram post 6" onerror="this.style.display='none'" />
+                        <img src="assets/images/insta/insta-6.png" alt="Instagram post 6" onerror="this.style.display='none'" />
                         <div class="insta-placeholder">📸</div>
                         <div class="insta-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></div>
                         </a>
@@ -746,7 +711,7 @@
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                                 <div>
                                     <strong>Location</strong>
-                                    <span>f-7 Markaz, Islamabad, Pakistan</span>
+                                    <span>Tayba Colony, Sharaqpur Sharif, Punjab, Pakistan</span>
                                 </div>
                             </div>
                             <div class="contact-detail-item">
@@ -757,18 +722,18 @@
                                 </div>
                             </div>
                     </div>
-                    <!-- SOCIAL LINKS: Update hrefs with your real profiles -->
+
                     <div class="social-links">
                         <a href="https://www.instagran.com/noirelifestyle" target="_blank" rel="noopener" arias-label="Instagram" class="social-link">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg> 
                         </a>
-                        <a href="https://www.facebook.com/niorelifestyle" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+                        <a href="https://www.facebook.com/noirelifestyle" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                         </a>
                         <a href="https://wa.me/923001234567" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-link">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
                         </a>
-                        <a href="https:www.tiktok.com/@niorelifestyle" target="_blank" rel="noopener" aria-label="TikTok" class="social-link">
+                        <a href="https:www.tiktok.com/@noirelifestyle" target="_blank" rel="noopener" aria-label="TikTok" class="social-link">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.3 6.3 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
                         </a>
                     </div>
@@ -817,8 +782,7 @@
                         <span class="logo-sub">LIFESTYLE</span>
                     </a>
                     <p class="footer-tagline">Wear what you feel.</p>
-                    <!-- FOOTER LOGO IMAGE (optional): uncomment and use instead of text logo -->
-                    <!-- <img src="assets/images/logo-light.png" alt="Noire Lifestyle" class="logo-img" /> -->
+                    <img src="assets/images/logo-light.png" alt="Noire Lifestyle" class="logo-img">
                 </div>
 
                 <div class="footer-links-group">
@@ -884,4 +848,4 @@
 
         <script src="script.js"></script>
     </body>
-</html>
+</html><source 
