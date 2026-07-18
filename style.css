@@ -79,12 +79,16 @@ margin-bottom: 12px;
     font-family: var(--font-display);
     font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 300;
-    color: var(--charcoal);
+    color: var(--gold);
     margin-bottom: 40px;
     line-height: 1.18;
 }
 
-.selection-title em{font-style: italic; color: var(--gold);}
+.selection-title em
+{
+    font-style: italic;
+    color: var(--gold);
+}
 
 .selection-row
 {
@@ -258,6 +262,15 @@ flex-shrink: 0;
     text-transform: uppercase;
 }
 
+.logo-text:hover
+{
+    font-size: 1.80rem;
+    .logo-sub
+    {
+        font-size: 0.7rem;
+    }
+}
+
 .logo-sub
 {
     font-size: 0.52rem;
@@ -282,7 +295,7 @@ flex-shrink: 0;
 
 .nav-link
 {
-    font-size: 0.78rem;
+    font-size: 0.85rem;
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -294,11 +307,22 @@ flex-shrink: 0;
     white-space: nowrap;
 }
 
-.nav-link:hover{color: var(--gold);}
+.nav-link:hover
+{
+    color: var(--gold);
+    font-size: 0.95rem;
+}
 
-.nav-arrow{font-size: 0.65rem; margin-left: 2px;}
+.nav-arrow
+{
+    font-size: 0.65rem;
+    margin-left: 2px;
+}
 
-.has-dropdown{position: relative;}
+.has-dropdown
+{
+    position: relative;
+}
 
 .dropdown
 {
@@ -327,7 +351,14 @@ animation: fadeDown 0.22s ease forwards;
 .has-dropdown:hover .dropdown,
 .has-dropdown:focus-within .dropdown{display: flex;}
 
-.dropdown-col{display: flex; flex-direction: column; gap: 6px; min-width: 130px;}
+.dropdown-col
+{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 130px;
+    
+}
 
 .dropdown-heading
 {
@@ -344,12 +375,17 @@ animation: fadeDown 0.22s ease forwards;
 .dropdown a
 {
     font-size: 0.82rem;
-    color: rgba(225,225, 255, 0.08);
+    color: rgba(255, 255 ,255, 0.82);
     padding: 4px 0;
     transition: color var(--transition);
 }
 
-.dropdown a:hover{color: var(--gold); padding-left: 4px;}
+.dropdown a:hover
+{
+    font-size: 0.9rem;
+    color: var(--gold);
+    padding-left: 4px;
+}
 
 .headr-icons{display: flex; align-items: center; gap: 8px;}
 
@@ -1103,7 +1139,7 @@ background:
 
     background:
         linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-        url("assets/images/artisan-banner.png");
+        url("assets/images/artisan-banner.webp");
 
     background-size: cover;
     background-position: center;
@@ -1489,17 +1525,12 @@ background:
 .social-links
 {
     display: flex;
-    gap: 120px;
+    gap: 20px;
     flex-wrap: wrap;
-}
-
-.social-links
-{
     width: 40px;
     height: 40px;
     border-radius: 50%;
     border: 1.5px solid tgba(28, 28, 30, 0.15);
-    display: flex;
     align-items: center;
     justify-content: center;
     color: var(--mid-grey);
@@ -1607,6 +1638,13 @@ background:
     gap: 10px;
 }
 
+.footerlinks-group
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .footer-heading
 {
     font-size: 0.68rem;
@@ -1624,11 +1662,25 @@ background:
     transition: color var(--transition), padding-left var(--transition);
 }
 
+.footerlinks-group a
+{
+    font-size: 0.82rem;
+    color: rgba(240, 237, 232, 0.52);
+    transition: color var(--transition), padding-left var(--transition);
+}
+
 .footer-links-group a:hover
 {
     color: var(--off-white);
     padding-left: 4px;
 }
+
+.footerlinks-group a:hover
+{
+    color: var(--off-white);
+    padding-left: 4px;
+}
+
 .footer-newsletter-col{gap: 14px;}
 .footer-newsletter-desc
 {

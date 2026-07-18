@@ -613,5 +613,3 @@ function closeCart()
                 console.log('%cNoire Lifestyle 🖤', 'font-family: Georgia, serif; font-size:20px; color: #C9A96E;');
                 console.log('%cPowered by craft, worn with purpose.', 'font-size: 12px; color: #888;');
                 });
-
-                
