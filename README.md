@@ -3,10 +3,6 @@
 > **A modern online fashion store built from scratch using HTML, CSS & JavaScript.**
 
 <p align="center">
-  <img src="images/banner.png" alt="Noire Lifestyle Banner" width="100%">
-</p>
-
-<p align="center">
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5\&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge\&logo=css3\&logoColor=white)
@@ -37,40 +33,17 @@ Just code.
 
 ### Home Page
 
-> Replace this with a screenshot.
-
-![Home](images/home.png)
-
+<img width="950" height="404" alt="Screenshot 2026-08-01 171149" src="https://github.com/user-attachments/assets/6d8e18be-d0f5-4ae2-bc3c-9ed15e9b36a7" />
 
 ### Products
 
-> Replace this with a screenshot.
+<img width="943" height="399" alt="Screenshot 2026-08-01 171207" src="https://github.com/user-attachments/assets/41db1772-3857-4baf-9a74-d899f1b87d96" />
 
-![Products](images/products.png)
-
-
-### Cart
-
-> Replace this with a screenshot.
-
-![Cart](images/cart.png)
-
-
-## 🚀 Features
-
-* 🛍 Modern shopping interface
-* 📱 Responsive design
-* 🎨 Clean UI
-* ⚡ Fast loading
-* 🛒 Shopping cart
-* 💻 Pure HTML/CSS/JavaScript
-* 📦 Organized project structure
-* ✨ Smooth animations
 
 
 ## 📂 Project Structure
 
-```text
+```
 Noire-Lifestyle/
 │
 ├── index.html
@@ -80,7 +53,7 @@ Noire-Lifestyle/
 ├── js/
 │   └── script.js
 │
-├── images/
+├── assets/
 │
 └── README.md
 ```
@@ -88,7 +61,7 @@ Noire-Lifestyle/
 
 ## 🛠 Built With
 
-```txt
+```
 Editor
 └── Visual Studio Code
 
@@ -97,34 +70,6 @@ Frontend
 ├── CSS3
 └── JavaScript
 ```
-
----
-
-## 🎯 Future Improvements
-
-* Wishlist
-* User authentication
-* Product filtering
-* Search functionality
-* Payment gateway
-* Backend integration
-* Database support
-* Dark/Light mode
-
-
-## 🧠 What I Learned
-
-While making this project I got more comfortable with:
-
-* Responsive layouts
-* Better CSS organization
-* JavaScript DOM manipulation
-* UI design
-* Project structure
-* Debugging frontend code
-
-Every project teaches something new, and this one definitely helped me improve.
-
 
 ## 📷 More Screenshots
 
