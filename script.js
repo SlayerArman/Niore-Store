@@ -258,7 +258,7 @@ function closeCart()
             showToast('Your bag is empty!');
             return;
         }
-        // TODO: replace with real checkout URL
+
         showToast('Redirecting to checkout...');
     });
 
@@ -378,7 +378,6 @@ function closeCart()
                     return;
                 }
 
-                // TODO: send `email` to your newsletter service (e.g. Mailchimp, SendGrid)
                 showToast(`You're subscribed! Welcome to Noire. ✓`);
                 input.value = '';
             });
@@ -422,8 +421,6 @@ function closeCart()
                 return;
             }
 
-            // TODO: send form data to your backend / Formspree / EmailJS
-            // Example with Formspree: fetch('https://formspree.io/f/YOUR_FORM_ID',) {
             showToast('Message sent! We\'ll get back to you soon. ✓' );
             form.reset();
 
@@ -609,7 +606,7 @@ function closeCart()
                 })();
 
                 document.addEventListener('DOMContentLoaded', () => {
-                // Add any additional init code here if needed.
+
                 console.log('%cNoire Lifestyle 🖤', 'font-family: Georgia, serif; font-size:20px; color: #C9A96E;');
                 console.log('%cPowered by craft, worn with purpose.', 'font-size: 12px; color: #888;');
                 });

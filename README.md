@@ -49,23 +49,6 @@ Just code.
 ![Products](images/products.png)
 
 
-### Cart
-
-> Replace this with a screenshot.
-
-![Cart](images/cart.png)
-
-
-## 🚀 Features
-
-* 🛍 Modern shopping interface
-* 📱 Responsive design
-* 🎨 Clean UI
-* ⚡ Fast loading
-* 🛒 Shopping cart
-* 💻 Pure HTML/CSS/JavaScript
-* 📦 Organized project structure
-* ✨ Smooth animations
 
 
 ## 📂 Project Structure
@@ -80,7 +63,7 @@ Noire-Lifestyle/
 ├── js/
 │   └── script.js
 │
-├── images/
+├── assets/
 │
 └── README.md
 ```
@@ -88,7 +71,7 @@ Noire-Lifestyle/
 
 ## 🛠 Built With
 
-```txt
+```
 Editor
 └── Visual Studio Code
 
@@ -99,32 +82,6 @@ Frontend
 ```
 
 ---
-
-## 🎯 Future Improvements
-
-* Wishlist
-* User authentication
-* Product filtering
-* Search functionality
-* Payment gateway
-* Backend integration
-* Database support
-* Dark/Light mode
-
-
-## 🧠 What I Learned
-
-While making this project I got more comfortable with:
-
-* Responsive layouts
-* Better CSS organization
-* JavaScript DOM manipulation
-* UI design
-* Project structure
-* Debugging frontend code
-
-Every project teaches something new, and this one definitely helped me improve.
-
 
 ## 📷 More Screenshots
 
