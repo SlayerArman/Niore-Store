@@ -25,11 +25,10 @@ Everything was coded manually in **Visual Studio Code** using only:
 # 📸 Preview
 
 ### Home Page
-
+<img width="943" height="415" alt="Screenshot 2026-08-03 070017" src="https://github.com/user-attachments/assets/26b27ec3-f1b7-4733-965d-f51f10c24aa5" />
 
 ### Products
-
-
+<img width="936" height="407" alt="Screenshot 2026-08-03 070031" src="https://github.com/user-attachments/assets/34133de7-525f-41f1-b60e-b7c7bd27855b" />
 
 ## 📂 Project Structure
 
@@ -74,11 +73,3 @@ It helps more than you think.
 ## 👨‍💻 Author
 
 **Arman Ahmad**
-
-<p align="center">
-
-### 🖤 Noire Lifestyle
-
-*"Style isn't just what you wear. It's how you build."*
-
-</p>
